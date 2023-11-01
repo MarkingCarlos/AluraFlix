@@ -2,13 +2,15 @@ import React,  { useState } from "react";
 import './Form.css'
 import '../Menu/Menu'
 import ButtonLink from "../Button/ButtonLink";
-
+import App from "../../App";
 
 function Form (){
 
     const [opcoes] = useState(["Back-End", "Front-End", "Projetos"]);
   
     return(
+        <div>
+            <App/>
         <form className="Content">
             <div className="form-container">
                 <h1>Cadastro de video</h1>
@@ -29,6 +31,7 @@ function Form (){
             </div>
 
         </form>
+        </div>
     );
 }
 

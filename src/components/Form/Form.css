@@ -1,8 +1,15 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+body{
+  background-color: black;
+}
 form {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 60vh;
     margin: 0;
     background-color: black;
   }
@@ -26,7 +33,7 @@ form {
   }
 
   input, select{
-    width: 50vh;
+    width: 100%;
     height: 5vh;
   }
   

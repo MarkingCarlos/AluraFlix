@@ -1,13 +1,15 @@
 import Menu from './components/Menu/Menu';
-import Form from './components/Form/Form';
 import React from 'react'
 //import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import PrinPage from './components/PrinPage/Page'
+import Carousel from './components/Carousel/Carousel';
 function App() {
   return (
     <div>
      <Menu/>
-     <Form/>
+     <PrinPage/>
+     <Carousel/>
+     <Carousel/>
     </div>
   );
 }
