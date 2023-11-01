@@ -10,7 +10,7 @@ function Menu(){
             <img className="Logo" src={Logo} alt="CarFlix Logo"/>
             </a>
 
-            <ButtonLink className="ButtonLink" href="/">
+            <ButtonLink className="ButtonLink" href="../Form/Form.js">
                 Novo video
             </ButtonLink>
         </nav>
