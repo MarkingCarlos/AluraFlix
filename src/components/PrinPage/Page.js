@@ -20,15 +20,17 @@ function Page(){
         return () => clearInterval(interval);
       }, [videos.length]);
 
+ 
     return(
-        <div id="content">
+        <div id="video-container">
           
                 <div id="texto">
-                    <h1>{videos[currentVideoIndex].descricao}</h1>
+                    <h1 style={{color:'#04be4a'}}>{videos[currentVideoIndex].descricao}</h1>
                     <h2>{videos[currentVideoIndex].title} </h2>
                 </div>
-
+                
                 <iframe  height="433" src={videos[currentVideoIndex].url}  frameBorder="0" allow="autoplay"allowFullScreen></iframe>
+               
             
         </div>
     );

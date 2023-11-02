@@ -1,10 +1,39 @@
-.teste{
+.PerVideo{
     width: 90%;
     margin-left: 10%;
-    margin-left: 10%;
+    
 }
 
 .slick-next,
 .slick-prev {
   display: none !important;
+}
+
+h2{
+  color: aliceblue;
+  
+  font-size: 40px;
+  text-align: center;
+  
+  
+  
+  
+}
+
+#txth2{
+  margin-left: 4%;
+  margin-top: 1%;
+  margin-bottom: 0.5%;
+  border-radius: 6%;
+  padding: 0.4%;
+  width:fit-content;
+  border: 1px solid;
+ 
+  transition: box-shadow 0.3s ease; /* Adiciona uma transição suave */
+
+  /* Define um box-shadow inicial (sem brilho) */
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}#txth2:hover,
+#txth2:focus {
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
 }

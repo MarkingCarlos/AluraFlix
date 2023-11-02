@@ -9,7 +9,6 @@ function App() {
      <Menu/>
      <PrinPage/>
      <Carousel/>
-     <Carousel/>
     </div>
   );
 }

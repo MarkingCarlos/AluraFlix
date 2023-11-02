@@ -18,22 +18,43 @@ function Carousel() {
   };
 
   const videos = [
-    { title: 'One Republic', url: 'https://www.youtube.com/embed/4Afc3DyirHM', descricao: 'Couting Stars' },
-    { title: 'Imagine Dragons', url: 'https://www.youtube.com/embed/7wtfhZwyrcc', descricao: 'Beliver' },
-    { title: 'One Republic', url: 'https://www.youtube.com/embed/Dm_BrGu1sHM', descricao: 'Mirage' },
-    { title: 'Imagine Dragons', url: 'https://www.youtube.com/embed/zHfIkyLh-Ew', descricao: 'Children of the Sky' },
+    { cantor: 'One Republic', url: 'https://www.youtube.com/embed/4Afc3DyirHM', Nome: 'Couting Stars',category: 'Pop' },
+    { cantor: 'Imagine Dragons', url: 'https://www.youtube.com/embed/7wtfhZwyrcc', Nome: 'Beliver',category: 'Pop' },
+    { cantor: 'One Republic', url: 'https://www.youtube.com/embed/Dm_BrGu1sHM', Nome: 'Mirage',category: 'Pop' },
+    { cantor: 'Imagine Dragons', url: 'https://www.youtube.com/embed/zHfIkyLh-Ew', Nome: 'Children of the Sky',category: 'Pop' },
+    { cantor: 'Na Na Na', url: 'https://www.youtube.com/embed/egG7fiE89IU', Nome: 'My Chemical Romance',category: 'Rock' },
+    { cantor: 'Måneskin', url: 'https://www.youtube.com/embed/XrsbfrFPATs', Nome: 'GOSSIP',category: 'Rock' },
+    { cantor: 'Måneskin', url: 'https://www.youtube.com/embed/yOb9Xaug35M', Nome: 'I WANNA BE YOUR SLAVE',category: 'Rock' },
+    { cantor: 'Luísa Sonza', url: 'https://www.youtube.com/embed/xtXbC1o2JRw', Nome: 'A Dona Aranha',category: 'Nacional' },
+    { cantor: 'Canção Infantil', url: 'https://www.youtube.com/embed/Ri-eF5PJ2X0', Nome: 'Cesar MC',category: 'Nacional' },
+    { cantor: 'SuperCombo', url: 'https://www.youtube.com/embed/YW4-V0xQkTg', Nome: 'Piloto Automático',category: 'Nacional' },
+    { cantor: 'Cesar Mc', url: 'https://www.youtube.com/embed/Vx2QswxE1cg', Nome: 'DAI A CESAR O QUE É DE CESAR',category: 'Rap' },
+    { cantor: 'ADL', url: 'https://www.youtube.com/embed/R_4Clufmtq8', Nome: 'Favela Vive 5',category: 'Rap' },
+    { cantor: 'Rodrigo Zin', url: 'https://www.youtube.com/embed/A2HCiEX7hyc', Nome: 'Reconhecimento',category: 'Rap' },
+  ];
+  const categoria = [
+    { category: 'Pop' },
+    { category: 'Rock' },
+    { category: 'Rap' },
+    { category: 'Nacional' },
   ];
   return (
     <div>
-      <h2>Meu Carrossel</h2>
-      <Slider {...settings}>
-      {videos.map((videos, index) => (
-                    <div>
-                      <iframe key={index}  className='teste'  src={videos.url}  frameBorder="0" allowFullScreen></iframe>
-                    </div>
-                    ))}
+      {categoria.map((categoria,CategoriaIndex)=>(
+        <div key={CategoriaIndex}>
+          <div id='txth2'>
+            <h2>{categoria.category}</h2>
+          </div>
+          <Slider {...settings}>
+            {videos.filter((videos) => videos.category === categoria.category).map((videos, videoIndex)=>(
+              <div key={videoIndex}>
+                 <iframe   className='PerVideo'  src={videos.url}  frameBorder="0" allowFullScreen></iframe>
+              </div>
+            ))}
         
       </Slider>
+        </div>
+      ))}
     </div>
   );
 }
